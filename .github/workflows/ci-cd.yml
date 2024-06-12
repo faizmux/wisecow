@@ -45,7 +45,7 @@ jobs:
           KUBECONFIG: ${{ secrets.KUBECONFIG }}
         run: |
           mkdir -p $HOME/.kube
-          echo "$KUBECONFIG_B64" | base64 --decode > $HOME/.kube/config
+          echo "$KUBECONFIG" | base64 --decode > $HOME/.kube/config
           cat $HOME/.kube/config  # Print the content for debugging
           kubectl config view
 
