@@ -36,7 +36,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up kubectl
-      - uses: actions/checkout@v1
       - uses: actions-hub/kubectl@master
         with:
           version: '1.14.3'
